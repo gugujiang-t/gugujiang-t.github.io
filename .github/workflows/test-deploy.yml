@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
+          cache: yarn
 
       - name: 安装依赖
-        run: npm cli
+        run: yarn install --frozen-lockfile
       - name: 测试构建网站
-        run: npm run build
+        run: yarn build
