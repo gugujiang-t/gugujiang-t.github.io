@@ -9,6 +9,21 @@
   position: relative;
   overflow: hidden;
 }
+.avatar {
+  width: 200px; /* 根据需要调整大小 */
+  height: 200px;
+  border-radius: 50%; /* 使div成为圆形 */
+  overflow: hidden; /* 隐藏超出圆形部分的图片 */
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 2px solid #fff; /* 可选的边框 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 可选的阴影效果 */
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* 使图片也成为圆形 */
+}
 
 @media screen and (max-width: 996px) {
   .heroBanner {
