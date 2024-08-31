@@ -38,8 +38,8 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -49,8 +49,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -76,12 +76,21 @@ const config: Config = {
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "存档",
+          position: "right",
+          label: "知识&技能",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          to: "/blog",
+          label: "记录&教程",
+          position: "right",
+        },
+        {
+          to: "/practice",
+          label: "实践",
+          position: "right",
+        },
+        {
+          href: "https://github.com/gugujiang-t/gugujiang-t.github.io",
           label: "GitHub",
           position: "right",
         },

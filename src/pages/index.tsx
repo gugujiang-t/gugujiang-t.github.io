@@ -10,8 +10,12 @@ import styles from "./index.module.css";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero--primary", styles.heroBanner)}>
       <div className="container">
+        <div className={styles.avatar}>
+          <img src="/img/profile_1.jpg" />
+        </div>
+
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -21,7 +25,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            叩叩叩~
+            叩叩叩 →
           </Link>
         </div>
       </div>
@@ -32,10 +36,7 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title={`Hello from ${siteConfig.title}`} description="">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
