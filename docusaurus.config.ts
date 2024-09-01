@@ -36,6 +36,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+
+          sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -43,6 +45,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: "最近发布",
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
@@ -76,6 +79,7 @@ const config: Config = {
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
+
           position: "right",
           label: "知识&技能",
         },
@@ -85,7 +89,8 @@ const config: Config = {
           position: "right",
         },
         {
-          to: "/practice",
+          type: "docSidebar",
+          sidebarId: "practice",
           label: "实践",
           position: "right",
         },
