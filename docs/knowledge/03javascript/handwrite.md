@@ -189,7 +189,7 @@ Learning chinese
 
 - 考点 1：事件循环 同步异步
 - 考点 2：promise 串行化
-- 考点 3：this
+- 考点 3：this 有点像建造者模式
 - 考点 4：事件队列思想
 
 ```javascript
@@ -250,6 +250,13 @@ function Hardman(name) {
 ## Array 相关
 
 ### 1. 实现拍平
+
+```typescript
+function flatArray(arr, cnt) {
+  // 使用reduce
+  arr.reduce(() => {});
+}
+```
 
 ### 2. 树转列表
 
