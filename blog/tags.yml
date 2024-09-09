@@ -17,3 +17,8 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+tricks:
+  label: 技巧
+  permalink: /tricks
+  description: tricks tag description

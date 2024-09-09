@@ -15,7 +15,7 @@ const arr = Array.from({ length: m })
   .map(() => new Array(n));
 
 // 方法2：使用new、fill、map
-const arr2 = new Array(m).fill(null).map(() => new Array(n));
+const arr2 = new Array(m).fill().map(() => new Array(n));
 
 // 方法3：使用循环
 let m = 3;

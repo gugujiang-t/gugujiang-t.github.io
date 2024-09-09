@@ -1,6 +1,8 @@
 # 泛型
 
-```typescript title="接口泛型"
+## 接口泛型
+
+```typescript
 interface GenericIdentityFn<T> {
   (arg: T): T;
 }
@@ -8,7 +10,9 @@ interface GenericIdentityFn<T> {
 let myIdentity: GenericIdentityFn<number> = identity;
 ```
 
-```typescript title="函数泛型"
+## 函数泛型（多态）
+
+```typescript
 function identity<T>(arg: T): T {
   return arg;
 }
@@ -34,7 +38,9 @@ type Filter<T> = (array: T[], f: (item: T) => boolean): T[]
 let filter: Filter<number> = //...
 ```
 
-```typescript title="类泛型"
+## 类泛型
+
+```typescript
 class GenericNumber<T> {
   zeroValue: T;
   add: (x: T, y: T) => T;
