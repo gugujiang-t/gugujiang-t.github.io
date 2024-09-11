@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         A front-end engineer <br />
-        also interested in Python
+        Job seeking...
       </>
     ),
   },

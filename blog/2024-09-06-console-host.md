@@ -4,7 +4,7 @@ title: 控制台配代理
 tags: [tricks]
 ---
 
-> 参考：[[text](https://weilining.github.io/294.html)](https://weilining.github.io/294.html)
+> 参考：[https://weilining.github.io/294.html](https://weilining.github.io/294.html)
 > 亲测好用，记录一下
 
 ## 环境
