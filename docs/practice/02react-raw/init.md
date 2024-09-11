@@ -1,8 +1,12 @@
 # 起步
 
-## 项目地址
+## 参考资料
 
-[[text](https://github.com/facebook/react/tree/v18.2.0)](https://github.com/facebook/react/tree/v18.2.0)
+## 源码地址
+
+V18.20
+
+[https://github.com/facebook/react/tree/v18.2.0](https://github.com/facebook/react/tree/v18.2.0)
 
 ## 目录分析
 
