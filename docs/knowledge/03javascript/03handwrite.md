@@ -281,6 +281,13 @@ function get(source, path, defaultValue = undefined) {
 
 ### 轮播图
 
+wip...
+方法 1：
+
+方法 2：
+
+https://codesandbox.io/p/sandbox/snowy-field-wcy5rg
+
 ### 歌词滚动功能
 
 ### 遍历树组件
