@@ -277,16 +277,81 @@ function get(source, path, defaultValue = undefined) {
 }
 ```
 
+## 对象相关
+
+### 1. 深拷贝（考虑循环引用、不可枚举属性和 Symbol 属性）
+
+```javascript
+/**
+ * deepClone
+ * @param obj 需要拷贝的对象
+ * @param hash 标记每一个出现过的属性，避免循环引用
+ */
+function deepClone(obj, hash = new WeakMap()) {
+  // 如果不为对象 直接返回自身
+  if (typeof obj !== "object" || obj === null) {
+    return obj;
+  }
+  // 函数 正则 日期 ES6新对象,执行构造题，返回新的对象
+  const constructor = obj.constructor;
+  if (/^(Function|RegExp|Date|Map|Set)$/i.test(constructor.name))
+    return new constructor(obj);
+
+  // 取weakMap中的 避免循环引用
+  if (hash.get(obj)) {
+    return hash.get(obj);
+  }
+  let res = Array.isArray(obj) ? [] : {};
+  hash.set(obj, res);
+  // 获取所有属性名，包括不可枚举的属性和symbol
+  const keys = Reflect.ownKeys(obj);
+  keys.forEach((key) => {
+    if (typeof key === "symbol") {
+      // 获取Symbol属性的描述符
+      const descriptor = Object.getOwnPropertyDescriptor(obj, key);
+      Object.defineProperty(res, key, {
+        ...descriptor,
+        value: deepClone(obj[key], hash),
+      });
+    } else {
+      if (obj.hasOwnProperty(key)) {
+        res[key] = deepClone(obj[key], hash);
+      }
+    }
+  });
+}
+```
+
+### 2. 寄生组合式式继承
+
+```javascript
+
+```
+
 ## 组件设计题
 
 ### 轮播图
 
-wip...
-方法 1：
+- 图片拼接，overflow 区域 hidden
+- 左右箭头，收尾可循环播放
+  - optional: 节流
+- 自动播放
+- 小圆点
 
-方法 2：
+**方法 1： 纯 CSS**
 
-https://codesandbox.io/p/sandbox/snowy-field-wcy5rg
+animation 分帧写关键帧
+
+缺点：
+
+- 根据图片张数写关键帧，不灵活
+- 小圆点部分还是需要 js
+
+**方法 2： Javascript**
+
+left 的值控制拼接图移动
+
+[https://codesandbox.io/p/sandbox/snowy-field-wcy5rg](https://codesandbox.io/p/sandbox/snowy-field-wcy5rg)
 
 ### 歌词滚动功能
 
