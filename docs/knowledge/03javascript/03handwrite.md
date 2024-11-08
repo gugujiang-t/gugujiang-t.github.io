@@ -319,6 +319,7 @@ function deepClone(obj, hash = new WeakMap()) {
       }
     }
   });
+  return res;
 }
 ```
 
