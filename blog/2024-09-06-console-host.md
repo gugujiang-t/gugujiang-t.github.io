@@ -15,6 +15,8 @@ macOS，使用 ClashX 1.117.1，ClashX 正常代理，使用自带终端。
 
 克隆 git 仓库、python 下依赖、使用 homebrew、npm 等
 
+<!-- truncate -->
+
 ## 配置
 
 打开终端，输入以下代码
